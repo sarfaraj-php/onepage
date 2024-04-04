@@ -1,0 +1,13 @@
+#banner .banner-wrapper {
+  margin-top: 84.5px;
+}
+#banner .banner-wrapper .image {
+  position: relative;
+  padding: 15% 50%;
+}
+#banner .banner-wrapper .image picture img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=banner.css.map */

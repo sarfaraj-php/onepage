@@ -1,0 +1,49 @@
+#about-us {
+    background: $white_color;
+    .row {
+        @include row; 
+        @include align-item-center;
+        .d-col-66 {
+            @include d-col-66;
+            margin-bottom: 0;
+        }
+        .d-col-33 {
+            @include d-col-33;
+        }
+        span {
+            margin-bottom: 10px;
+            display: block;
+            color: $site_secondary_color;
+        }
+        h5 {
+            color: $site_primary_color;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        p{
+            margin-bottom: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;           
+            li {
+                color: $site_text_color;
+                font-size: 16px;
+                line-height: 30px;
+                padding-left: 15px;
+                text-align: left;
+                position: relative;                
+                &::before {
+                    content: '-';                    
+                    width: 14px;
+                    height: 14px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+

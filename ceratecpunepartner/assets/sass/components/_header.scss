@@ -1,0 +1,149 @@
+@import "../common/mixin";
+header {
+  position:sticky;
+  top:0;
+  @include transition(0.5s);
+  z-index: 2;
+  width: 100%;
+  padding: 25px 0;
+  background-color: #F2F2F2;
+  &.sticky {
+    position: fixed;
+    top: 0;
+  }
+  .logo picture {
+    @include transition(0.5s);
+    width: 80px;
+    @include flexbox;
+    @include align-item-center;
+    margin: 0 auto;
+    @media only screen and (min-width: $device-md) {
+      width: 150px;
+    }
+    @media only screen and (min-width: $device-xl) {
+      margin: unset;
+    }
+    img, source {
+      width: auto;
+      max-width: 113px;
+      @media only screen and (min-width: $device-xl) {
+        max-width: 150px;
+      }
+    }
+  }
+  .header-wrapper {
+    @include flexbox;
+    @include space-between;
+    @include align-item-center;
+    nav ul {
+      margin: 0;
+      padding: 0;
+      @media only screen and (min-width:$device-xl) {
+        @include flexbox;
+        flex-wrap: wrap;
+      }
+      li {
+        list-style: none;
+        @include flexColumn;
+        @include flexbox;
+        @media only screen and (min-width:$device-xl) {
+          @include flexrow;
+        }
+        a {
+          font-size: 15px;
+          text-decoration: none;
+          font-weight: 500;
+          padding: 10px 20px;
+          text-transform: uppercase;
+          color: $white_color;
+          @media only screen and (min-width:$device-xl) {
+            font-size: 14px;
+            color: $site_primary_color;
+            padding: 10px 11px;
+          }
+          @media only screen and (min-width:$device-xl) {
+            font-size: 16px;
+            padding: 10px 13px;
+          }
+          @media only screen and (min-width:$device-xxl) {
+            font-size: 18px;
+            padding: 10px 25px;
+          }
+          &:hover {
+            background-color: $site_secondary_color;
+            color: $white_color;
+          }
+        }
+      }
+    }
+    > .request-call {
+      display: none;
+      @media only screen and (min-width: $device-xl){
+        margin-right: 0;
+        display: block;
+      }
+      a {
+        background: $site_button_color;
+        color: $white_color;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px;
+        border: 1px solid transparent;
+        @media only screen and (min-width: $device-md){
+          font-size: 15px;
+          padding: 15px 20px;
+        }
+        @media only screen and (min-width: $device-xl){
+          font-size: 18px;
+        }
+        &:hover {
+          background: $white_color;
+          color: $site_button_color;
+          border : 1px solid $site_primary_color;
+        }
+      }
+    }
+  }
+}
+.menu-toggle {
+  display: none;
+  .svg {
+    cursor: pointer;
+  }
+}
+@media (max-width: 1200px) {
+  header {
+    padding: 20px 0;
+    .menu-toggle {
+      @include flexbox;
+      @include align-item-center;
+      svg {
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        margin-left: 30px;
+      }
+    }
+    nav {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      background: $site_button_color;
+      // top: -160px;
+      // left: 0;
+      top: 81px;
+      right: -100%;
+      @include transition(0.5s);
+      &.active {
+        right: 0;
+      }
+    }
+  }
+}
+@media (max-width: $device-md) {
+  header {
+    nav {
+      top: 75px;
+    }
+  }
+}

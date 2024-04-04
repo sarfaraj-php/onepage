@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+header {
+  position: fixed;
+  transition: all 0.5s ease;
+  z-index: 2;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #002043;
+  /* NAVIGATION */
+}
+@media only screen and (min-width: 768px) {
+  header {
+    padding: 10px 0;
+  }
+}
+header .header-wrapper {
+  transition: all 0.5s ease;
+}
+@media only screen and (min-width: 768px) {
+  header .header-wrapper {
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+header .menu-wrapper {
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  header .menu-wrapper {
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+  }
+}
+header .logo picture {
+  transition: all 0.5s ease;
+  width: 180px;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  header .logo picture {
+    margin: unset;
+  }
+}
+header .logo picture img, header .logo picture source {
+  width: 100%;
+}
+header .toggle {
+  cursor: pointer;
+  width: 30px;
+  height: 40px;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: -50px;
+  /* button bars hover animation */
+  /* button onclick animation */
+}
+@media screen and (min-width: 768px) {
+  header .toggle {
+    display: none;
+  }
+}
+header .toggle span {
+  width: 100%;
+  margin-bottom: 7px;
+  height: 3px;
+  background-color: #FFFFFF;
+  transition: all 0.2s ease;
+}
+header .toggle:hover > span {
+  background-color: #FFBE00;
+  outline: none;
+}
+header .toggle > span:first-child {
+  transform: translateY(-30%);
+}
+header .toggle > span:last-child {
+  transform: translateY(30%);
+}
+header .toggle:hover span:nth-child(1) {
+  transform: translateY(-100%);
+}
+header .toggle:hover span:nth-child(3) {
+  transform: translateY(100%);
+}
+header .toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  outline: none;
+}
+header .toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+  outline: none;
+}
+header .toggle.active span:nth-child(2) {
+  transform: rotate(45deg) translate(9px, 8px);
+  opacity: 0;
+  outline: none;
+}
+header .nav {
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  header .nav {
+    display: -ms-flex;
+    display: flex;
+  }
+}
+header .nav ul {
+  transition: all 0.5s ease;
+  list-style-type: none;
+  position: absolute;
+  right: -20px;
+  background: #18352D;
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+}
+@media only screen and (min-width: 768px) {
+  header .nav ul {
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    position: unset;
+    width: unset;
+    max-width: unset;
+    background: none;
+    height: unset;
+  }
+}
+header .nav ul li {
+  display: -ms-flex;
+  display: flex;
+}
+header .nav ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 300;
+  padding: 10px 25px;
+  text-transform: capitalize;
+  color: #FFBE00;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+header .nav ul li a:hover {
+  background-color: #FFBE00;
+  color: #002043;
+}/*# sourceMappingURL=header.css.map */

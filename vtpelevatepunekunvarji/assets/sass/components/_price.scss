@@ -1,0 +1,121 @@
+#price {
+    background: url('../../images/price-banner.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 0;
+    padding-top: 30px;
+    @media only screen and (min-width: $device-md) {
+        background-size: 100% 100%;  
+        padding-bottom: 210px;
+    }
+    &:before {
+        content: '';
+        background: rgba(0,0,0,0.5);
+        background-size: 100% 50%;
+        background-position: center;
+        position: absolute;
+        inset: 0;
+    }  
+    .price-wrapper {
+        @media only screen and (min-width: $device-md) {
+            position: absolute;
+            width: calc(100% - 30px);
+            top: 0;
+        }
+    }
+    h2 {
+        color: $white_color;
+    }
+    .apartment-list {
+        margin-top: 40px;
+        @include flexbox;
+        flex-wrap: wrap;
+        @include space-between;
+        @media only screen and (min-width: $device-md) {  
+            justify-content: unset;
+        }
+        .wrapper {
+            margin-top: 0;
+            padding: 20px 15px;
+            width: 100%;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: $white_color;
+            @include border-radius(16px);
+            @include text-center;
+            font-family: $site_font_secondary;
+            margin-bottom: 10px;
+            @media only screen and (min-width: $device-sm) { 
+                width: calc(50% - 5px); 
+            }
+            @media only screen and (min-width: $device-md) {          
+                width: calc(33.33% - 14px);
+                margin: 0 20px 20px 0;
+            }
+            @media only screen and (min-width: 1400px) {          
+                padding: 30px;
+            }
+            &:nth-child(3n+3) {
+                margin-right: 0;
+                margin-bottom: 0;
+                @media only screen and (min-width: $device-md) {
+                    margin-bottom: auto;
+                }
+            }
+            .bhk {
+                border: 1px solid $site_primary_color;
+                @include border-radius(5px);
+                letter-spacing: 0.5px;
+                color: $site_primary_color;                
+                font-size: 16px;
+                line-height: 25px;
+                font-weight: 700;
+                margin-bottom: 15px;
+                padding: 5px 0;
+            }
+            .price {
+                font-family: $site_font_primary;
+                font-size: 18px;
+                line-height: 25px;
+                font-weight: 600;
+                color: $site_button_color;
+                letter-spacing: 0.55px;
+                margin-bottom: 10px;
+            }
+            .size {
+                @include flexbox;
+                @include justify-center;
+                letter-spacing: 0.45px;
+                color: #3A3A3A;
+                font-size: 16px;
+                margin-bottom: 15px;
+                font-weight: 500;
+            }
+            button {
+                background: $site_button_color;
+                color: $white_color;
+                border: 0;
+                text-transform: capitalize;
+                padding: 7px 0;
+                max-width: 130px;
+                width: 100%;
+                font-size: 16px;
+                @include border-radius(5px);
+                letter-spacing: 0.55px;
+                font-family: $site_font_primary;
+                cursor: pointer;
+            }
+        }
+    }
+    .row {
+        @include row; 
+        @include align-item-center;
+        .d-col-66 {
+            @include d-col-66;
+            position: relative;
+        }
+        .d-col-33 {
+            @include d-col-33;
+        }   
+    }
+}

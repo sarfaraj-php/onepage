@@ -1,0 +1,50 @@
+#modal-popup {
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+    .banner-form {
+        max-width: max-content;
+        // margin: 100px auto;
+        margin: 0 auto;
+        position: relative;
+        width: calc(100% - 30px);
+        @media only screen and (min-width: $device-tab) {
+            max-width: 400px;
+        }
+        .sidebar {
+            // position: absolute;
+            // left: 0;
+            // right: 0;
+            // max-width: 400px; 
+            // margin: 0 auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            max-width: 400px;
+            margin: 0 auto;
+            transform: translate(0, 50%);
+            @media only screen and (max-width: $device-xl){
+                width: calc(100% - 30px) !important;
+            }
+        }
+        .close {
+            cursor: pointer;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            background: $white_color;
+            @include border-radius(50px);
+            width: 25px;
+            height: 25px;
+            @include text-center;
+            vertical-align: middle;
+            color: $site_primary_color;
+            line-height: 22px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+    }    
+}

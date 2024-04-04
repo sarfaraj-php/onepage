@@ -1,0 +1,38 @@
+#mobile-bottom-links {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: $site_primary_color;
+    @include text-center;
+    z-index: 1000;
+    .bottom-links ul {
+        @include flexbox;        
+        @include just-center;
+        align-items: stretch;
+        border-top: 1px solid $site_primary_color;
+        li {
+            border-right: 1px solid $white_color;
+            width: 33.33%;
+            &:last-child {
+                border-right: 0;
+            }
+            a {
+                text-transform: capitalize;
+                font-weight: 700;
+                font-size: 13px;
+                padding: 12px 0;
+                display: inline-block;
+                width: 100%;
+                color: $white_color;
+            }
+            img {
+                width: 20px;
+                margin-right: 5px;
+            }
+        }
+    }
+    @media only screen and (min-width: $device-xl){
+        display: none;
+    }
+}

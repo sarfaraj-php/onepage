@@ -1,0 +1,53 @@
+#location-connectivity {
+    .row {
+        @include row; 
+        @include align-item-start;
+        
+        .d-col-66 {
+            @include d-col-66;
+        }
+        .d-col-2 {
+            @include d-col-2;
+            @media only screen and (min-width: $device-md) {  
+                margin-bottom: 0 !important;
+            }
+        }
+        .d-col-33 {
+            @include d-col-33;
+        }  
+        h2 {
+            margin-bottom: 15px;
+            @media only screen and (min-width: $device-md) {  
+                margin-bottom: 30px;
+            }
+        }    
+        ul {            
+            li {
+                color: $site_primary_color;
+                font-size: 16px;
+                line-height: 25px;
+                margin-bottom: 5px;
+                padding-left: 15px;
+                text-align: left;
+                position: relative;  
+                @media only screen and (min-width : $device-md) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+                &::before {
+                    content: '-';                    
+                    width: 14px;
+                    height: 14px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+        #map {
+            @include border-radius(10px);
+        }
+    }
+}
+
+
